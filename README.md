@@ -1,5 +1,5 @@
 # OrangePi Zero (H2+, H3) Hardware PWM-Fan control #
-How to control a PWM fan depending on CPU temperature on a OrangePi Zero (H2+ / H3) directly from the harware pwm pin (without a transistor)? 
+How to control a PWM fan depending on CPU temperature on a OrangePi Zero (H2+ / H3) directly from the harware pwm pin (without a transistor, diode and resistor)? 
 
 ![OrangePi Zero](https://github.com/3KUdelta/Orange-Pi-H2-H3-Hardware-PWM-Fan/blob/main/pics/PWM_FAN_1.jpg "")
 
