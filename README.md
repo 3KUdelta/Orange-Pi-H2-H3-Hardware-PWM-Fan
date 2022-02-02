@@ -75,4 +75,22 @@ GREEN (RPM) will NOT be connected
 
 ![OrangePi Zero](https://github.com/3KUdelta/Orange-Pi-H2-H3-Hardware-PWM-Fan/blob/main/pics/PWM_FAN_3.jpg "")
 
+### Step 7: Python program and autostart ###
 
+Credits for this goes to [https://www.instructables.com/PWM-Regulated-Fan-Based-on-CPU-Temperature-for-Ras/](https://www.instructables.com/PWM-Regulated-Fan-Based-on-CPU-Temperature-for-Ras/ "")
+
+To run the program automatically at startup, I made a bash script where I put all the programs I want to launch, and then I launch this bash script at startup with rc.local.
+
+Use FileZilla or similar to copy ___launch_fan_ctrl.sh___ and ___fan_ctrl.py___ into ___/home___
+
+Edit the /etc/rc.local file and add a new line before the "exit 0": sudo sh '/home/launch_fan_ctrl.sh'
+
+```# nano /etc/rc.local```
+
+add ___sudo sh '/home/launch_fan_ctrl.sh'___ as a new line before exit 0
+
+Exit Nano with <kbd>ControlX</kbd>, <kbd>y</kbd> and <kbd>Enter</kbd>
+
+```# sudo reboot```
+
+## done! ##
