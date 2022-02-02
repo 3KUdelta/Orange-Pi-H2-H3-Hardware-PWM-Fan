@@ -1,4 +1,4 @@
-# OrangePi Zero (H2+ H3) Hardware PWM-Fan control #
+# OrangePi Zero (H2+, H3) Hardware PWM-Fan control #
 How to control a PWM fan depending on CPU temperature on a OrangePi Zero (H2+ / H3)
 
 ![OrangePi Zero](https://github.com/3KUdelta/Orange-Pi-H2-H3-Hardware-PWM-Fan/blob/main/pics/PWM_FAN_1.jpg "")
@@ -21,7 +21,7 @@ The two most crucial third-party Python packages are setuptools and pip.
 
 ```# command -v pip3``` -->see if PIP for Python3 is installed
 
-### Step 3: Actiate HW pwm on your OPi Zero ###
+### Step 3: Activate HW pwm on your OPi Zero ###
 
 Edit /boot/armbianEnv.txt and add new line: overlays=pwm
 
