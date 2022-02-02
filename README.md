@@ -19,7 +19,7 @@ The two most crucial third-party Python packages are setuptools and pip.
 
 ```# command -v pip3``` -->see if PIP for Python3 is installed
 
-### Step 3: Actiate HW pwm on your OPi Zero###
+### Step 3: Actiate HW pwm on your OPi Zero ###
 
 Edit /boot/armbianEnv.txt and add new line: overlays=pwm
 
@@ -31,13 +31,13 @@ Exit Nano with <kbd>ControlX</kbd>, <kbd>y</kbd> and <kbd>Enter</kbd>
 
 ```sudo reboot```-->reboot the OPi
 
-### Step 4: Install OpiGPIO###
+### Step 4: Install OpiGPIO ###
 
 ```# sudo pip3 install --upgrade OPi.GPIO```
 
 More info about OPi.GPIO is here: [https://opi-gpio.readthedocs.io](https://opi-gpio.readthedocs.io/ "OPi.GPIO Reference").
 
-### Step 5: Install WiringOP-Zero (maybe not needed and can be skipped)###
+### Step 5: Install WiringOP-Zero ###
 
 ```# cd /root```
 ```# git clone https://github.com/xpertsavenue/WiringOP-Zero.git```
@@ -52,5 +52,9 @@ Test if successful:
 
 ```# gpio readall```
 
+`root@pi-zero-schwarz:~# gpio readall
 
+More info about WiringOP-Zero is here: [https://github.com/xpertsavenue/WiringOP-Zero](https://github.com/xpertsavenue/WiringOP-Zero/ "WiringOP-Zero Reference").
+
+### Step 6: Test ###
 
