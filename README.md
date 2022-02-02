@@ -19,7 +19,7 @@ The two most crucial third-party Python packages are setuptools and pip.
 
 ```# command -v pip3``` -->see if PIP for Python3 is installed
 
-### Step 3: Actiate HW pwm on your OrangePi ###
+### Step 3: Actiate HW pwm on your OPi Zero###
 
 Edit /boot/armbianEnv.txt and add new line: overlays=pwm
 
@@ -30,4 +30,9 @@ Edit /boot/armbianEnv.txt and add new line: overlays=pwm
 Exit Nano with <kbd>ControlX</kbd>, <kbd>y</kbd> and <kbd>Enter</kbd>
 
 ### Step 4: Install OpiGPIO
+
+```# sudo pip3 install --upgrade OPi.GPIO```
+
+More info about OPi.GPIO found [here](https://opi-gpio.readthedocs.io/ "OPi.GPIO Reference").
+
 
