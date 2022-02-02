@@ -1,6 +1,8 @@
 # OrangePi Zero (H2+ H3) Hardware PWM-Fan control #
 How to control a PWM fan depending on CPU temperature on a OrangePi Zero (H2+ / H3)
 
+![OrangePi Zero](https://github.com/3KUdelta/Orange-Pi-H2-H3-Hardware-PWM-Fan/blob/main/pics/PWM_FAN_1.jpg "")
+
 This solution requires Python - best with V 3.x or later. All examples are done with V 3.10
 
 This was developed and tested on an OrangePi Zero. Most likely it will work on any H2+ and H3 chip solutions. The only thing to bare in mind is that you need to use PWM0 pin. On the OPi Zero (or on PC+) board this is **the middle pin** of the Debug TTL UART pins (the tree pins that stand alone). 
@@ -59,6 +61,8 @@ More info about WiringOP-Zero is here: [https://github.com/xpertsavenue/WiringOP
 
 In my case I have bought a nocuta NF-A4x10 5V PWM fan [https://noctua.at/en/products/fan/nf-a4x10-5v-pwm](https://noctua.at/en/products/fan/nf-a4x10-5v-pwm/ "nocuta"). Excellent piece of work.
 
+![OrangePi Zero](https://github.com/3KUdelta/Orange-Pi-H2-H3-Hardware-PWM-Fan/blob/main/pics/PWM_FAN_2.jpg "")
+
 Connect: 
 
 YELLOW (VIN) to physical pin 4 (5V)
@@ -69,5 +73,6 @@ BLUE (PWM) to middle pin of Debug TTL UART pins (3 standalone pins next to the E
 
 GREEN (RPM) will NOT be connected
 
+![OrangePi Zero](https://github.com/3KUdelta/Orange-Pi-H2-H3-Hardware-PWM-Fan/blob/main/pics/PWM_FAN_3.jpg "")
 
 
