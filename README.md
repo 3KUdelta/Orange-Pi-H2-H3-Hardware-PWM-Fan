@@ -77,13 +77,11 @@ GREEN (RPM) will NOT be connected
 
 ### Step 7: Python program and autostart ###
 
-Credits for this goes to [https://www.instructables.com/PWM-Regulated-Fan-Based-on-CPU-Temperature-for-Ras/](https://www.instructables.com/PWM-Regulated-Fan-Based-on-CPU-Temperature-for-Ras/ "")
+Credits for this goes to [https://www.instructables.com/PWM-Regulated-Fan-Based-on-CPU-Temperature-for-Ras/](https://www.instructables.com/PWM-Regulated-Fan-Based-on-CPU-Temperature-for-Ras/ ""). To run the program automatically at startup, just use the bash script and autolaunch this bash script at startup within rc.local.
 
-To run the program automatically at startup, just use the bash script and autolaunch this bash script at startup within rc.local.
+Copy ___launch_fan_ctrl.sh___ and ___fan_ctrl.py___ into ___/home___ (use FileZilla or similar)
 
-Use FileZilla or similar to copy ___launch_fan_ctrl.sh___ and ___fan_ctrl.py___ into ___/home___
-
-Edit the /etc/rc.local file and add a new line before the "exit 0": sudo sh '/home/launch_fan_ctrl.sh'
+Edit the /etc/rc.local file and add a new line before the "exit 0": sudo sh '/home/launch_fan_ctrl.sh':
 
 ```# nano /etc/rc.local```
 
