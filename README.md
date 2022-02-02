@@ -29,7 +29,7 @@ Edit /boot/armbianEnv.txt and add new line: overlays=pwm
 
 Exit Nano with <kbd>ControlX</kbd>, <kbd>y</kbd> and <kbd>Enter</kbd>
 
-```sudo reboot```-->reboot the OPi
+```# sudo reboot```-->reboot the OPi
 
 ### Step 4: Install OpiGPIO ###
 
@@ -51,8 +51,6 @@ More info about OPi.GPIO is here: [https://opi-gpio.readthedocs.io](https://opi-
 Test if successful:
 
 ```# gpio readall```
-
-`root@pi-zero-schwarz:~# gpio readall
 
 More info about WiringOP-Zero is here: [https://github.com/xpertsavenue/WiringOP-Zero](https://github.com/xpertsavenue/WiringOP-Zero/ "WiringOP-Zero Reference").
 
