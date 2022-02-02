@@ -79,7 +79,7 @@ GREEN (RPM) will NOT be connected
 
 Credits for this goes to [https://www.instructables.com/PWM-Regulated-Fan-Based-on-CPU-Temperature-for-Ras/](https://www.instructables.com/PWM-Regulated-Fan-Based-on-CPU-Temperature-for-Ras/ "")
 
-To run the program automatically at startup, I made a bash script where I put all the programs I want to launch, and then I launch this bash script at startup with rc.local.
+To run the program automatically at startup, just use the bash script and autolaunch this bash script at startup within rc.local.
 
 Use FileZilla or similar to copy ___launch_fan_ctrl.sh___ and ___fan_ctrl.py___ into ___/home___
 
@@ -93,4 +93,4 @@ Exit Nano with <kbd>ControlX</kbd>, <kbd>y</kbd> and <kbd>Enter</kbd>
 
 ```# sudo reboot```
 
-## done! ##
+## done! :smile: ##
