@@ -35,11 +35,12 @@ Exit Nano with <kbd>ControlX</kbd>, <kbd>y</kbd> and <kbd>Enter</kbd>
 
 ```# sudo pip3 install --upgrade OPi.GPIO```
 
-More info about OPi.GPIO is here: [https://opi-gpio.readthedocs.io](https://opi-gpio.readthedocs.io/ "OPi.GPIO Reference").
+More info about OPi.GPIO is here: [https://opi-gpio.readthedocs.io](https://opi-gpio.readthedocs.io/ "OPi.GPIO Reference") and here: [https://github.com/rm-hull/OPi.GPIO](https://github.com/rm-hull/OPi.GPIO/ "OPi.GPIO Reference")
 
 ### Step 5: Install WiringOP-Zero ###
 
 ```# cd /root```
+
 ```# git clone https://github.com/xpertsavenue/WiringOP-Zero.git```
 
 ```# cd WiringOP-Zero```
@@ -54,5 +55,19 @@ Test if successful:
 
 More info about WiringOP-Zero is here: [https://github.com/xpertsavenue/WiringOP-Zero](https://github.com/xpertsavenue/WiringOP-Zero/ "WiringOP-Zero Reference").
 
-### Step 6: Test ###
+### Step 6: Install PWM Fan ###
+
+In my case I have bought a nocuta NF-A4x10 5V PWM fan [https://noctua.at/en/products/fan/nf-a4x10-5v-pwm](https://noctua.at/en/products/fan/nf-a4x10-5v-pwm/ "nocuta"). Excellent piece of work.
+
+Connect: 
+
+YELLOW (VIN) to physical pin 4 (5V)
+
+BLACK (GND) to physical pin 6 (GND)
+
+BLUE (PWM) to middle pin of Debug TTL UART pins (3 standalone pins next to the Ethernet plug)
+
+GREEN (RPM) will NOT be connected
+
+
 
