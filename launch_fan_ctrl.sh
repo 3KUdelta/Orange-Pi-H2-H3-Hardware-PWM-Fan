@@ -3,5 +3,5 @@
 locale
 cd /
 cd /home/
-sudo python3 ./fan_ctrl.py &
+sudo python3 ./fan_ctrl.py
 cd /
