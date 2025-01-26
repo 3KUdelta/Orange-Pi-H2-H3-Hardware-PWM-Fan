@@ -121,4 +121,6 @@ Exit Nano with <kbd>ControlX</kbd>, <kbd>y</kbd> and <kbd>Enter</kbd>
 
 ```# sudo reboot```
 
+You might to check the actual temperature: ```# armbianmonitor -m```
+
 ## done! :smile: ##
