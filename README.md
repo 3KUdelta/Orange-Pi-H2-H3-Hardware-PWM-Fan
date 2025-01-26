@@ -21,6 +21,8 @@ The two most crucial third-party Python packages are setuptools and pip.
 
 ```# command -v pip3``` -->see if PIP for Python3 is installed
 
+if not, install it: ```# sudo apt install python3-pip```
+
 ### Step 3: Activate HW pwm on your OPi Zero ###
 
 Edit /boot/armbianEnv.txt and add new line: overlays=pwm
@@ -37,23 +39,51 @@ Exit Nano with <kbd>ControlX</kbd>, <kbd>y</kbd> and <kbd>Enter</kbd>
 
 ```# sudo pip3 install --upgrade OPi.GPIO```
 
+If you get the following error: externally-managed-environment, use this prompt:
+
+```#sudo pip3 install --upgrade OPi.GPIO --break-system-packages``` and ignore the permission warning
+
 More info about OPi.GPIO is here: [https://opi-gpio.readthedocs.io](https://opi-gpio.readthedocs.io/ "OPi.GPIO Reference") and here: [https://github.com/rm-hull/OPi.GPIO](https://github.com/rm-hull/OPi.GPIO/ "OPi.GPIO Reference")
 
 ### Step 5: Install WiringOP-Zero ###
 
 ```# cd /root```
 
-```# git clone https://github.com/xpertsavenue/WiringOP-Zero.git```
+```# git clone https://github.com/xpertsavenue/WiringOP-Zero.git``` (if git is not installed do this first: ```#sudo apt-get install git```)
 
 ```# cd WiringOP-Zero```
 
 ```# chmod +x ./build```
 
-```# sudo ./build```
+```# sudo ./build``` (if you get error make: not found, install GCC first: ```#sudo apt install build-essential```
 
 Test if successful:
 
 ```# gpio readall```
+
+```
++-----+-----+----------+------+--Orange Pi Zero--+------+----------+-----+-----+
+| H2+ | wPi |   Name   | Mode | V | Physical | V | Mode | Name     | wPi | H2+ |
++-----+-----+----------+------+---+----++----+---+------+----------+-----+-----+
+|     |     |     3.3v |      |   |  1 || 2  |   |      | 5v       |     |     |
+|  12 |   8 |    SDA.0 | ALT3 | 0 |  3 || 4  |   |      | 5V       |     |     |
+|  11 |   9 |    SCL.0 | ALT3 | 0 |  5 || 6  |   |      | 0v       |     |     |
+|   6 |   7 |   GPIO.7 | ALT3 | 0 |  7 || 8  | 0 | ALT3 | TxD3     | 15  | 198 |
+|     |     |       0v |      |   |  9 || 10 | 0 | ALT3 | RxD3     | 16  | 199 |
+|   1 |   0 |     RxD2 | ALT3 | 0 | 11 || 12 | 0 | ALT3 | GPIO.1   | 1   | 7   |
+|   0 |   2 |     TxD2 | ALT3 | 0 | 13 || 14 |   |      | 0v       |     |     |
+|   3 |   3 |     CTS2 | ALT3 | 0 | 15 || 16 | 0 | ALT3 | GPIO.4   | 4   | 19  |
+|     |     |     3.3v |      |   | 17 || 18 | 0 | ALT3 | GPIO.5   | 5   | 18  |
+|  15 |  12 |     MOSI | ALT3 | 0 | 19 || 20 |   |      | 0v       |     |     |
+|  16 |  13 |     MISO | ALT3 | 0 | 21 || 22 | 0 | ALT3 | RTS2     | 6   | 2   |
+|  14 |  14 |     SCLK | ALT3 | 0 | 23 || 24 | 0 | ALT3 | CE0      | 10  | 13  |
+|     |     |       0v |      |   | 25 || 26 | 0 | ALT3 | GPIO.11  | 11  | 10  |
++-----+-----+----------+------+---+---LEDs---+---+------+----------+-----+-----+
+|  17 |  30 | STAT-LED |  OUT | 0 | 27 || 28 |   |      | PWR-LED  |     |     |
++-----+-----+----------+------+---+-----+----+---+------+----------+-----+-----+
+| H2+ | wPi |   Name   | Mode | V | Physical | V | Mode | Name     | wPi | H2+ |
++-----+-----+----------+------+--Orange Pi Zero--+---+------+---------+-----+--+
+```
 
 More info about WiringOP-Zero is here: [https://github.com/xpertsavenue/WiringOP-Zero](https://github.com/xpertsavenue/WiringOP-Zero/ "WiringOP-Zero Reference").
 
